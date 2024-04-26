@@ -14,7 +14,7 @@ class Presupuesto{
     private $SQL_USER;
     private $SQL_PASS;
     private $conn;
-	
+
 	public function __construct(){
 		$this->SQL_SERVER = 'localhost';
 		$this->DATABASE_NAME = 'predb';
@@ -118,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET'){
         $response = $PRE->request_juridico($nombre, $correo, $telefono, $asunto);
     }
     else{
-        $response = array('status'=>false, 'message'=>'Invalid TYPE' , 'answer'=>[]);
+        $response = array('status'=>false, 'message'=>'Invalid TYPE' , 'answer'=>[$tipo]);
     }
 	echo json_encode($response);
 }else{

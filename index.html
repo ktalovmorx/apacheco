@@ -51,8 +51,11 @@
         
             <div class="container-fluid">
                 <h2 class='rounded text-left' style="font-weight: bold;background-color:white;width:60%">Presupuesto para Administración de Fincas</h2>
-                <form id="finca_form" class="form-control bg-light" action="control.php?tipo=finca" method="GET">
+                <form id="finca_form" class="form-control bg-light" action="control.php" method="GET">
                     <div class="container-fluid" style="display:flex; flex-direction: row;flex-wrap:wrap">
+                        <div class="campo" style="visibility: hidden;">
+                            <input type="text" class="form-control" name="tipo" value="finca">
+                        </div>
                         <div class="campo">
                             <label for="name1" class="form-label" style="font-weight: normal;">Nombre <span class="wpforms-required-label">*</span></label>
                             <input type="text" class="form-control" id="name1" name="name1" required>
@@ -120,8 +123,11 @@
             
             <div class="container-fluid">
                 <h2 class='rounded text-left' style="font-weight: bold;background-color:white;width:60%">Presupuesto para Servicios Jurídicos</h2>
-                <form id="juridico_form" class="form-control bg-light" action="control.php?tipo=juridico" method="GET">
+                <form id="juridico_form" class="form-control bg-light" action="control.php" method="GET">
                     <div class="container-fluid" style="display:flex; flex-direction: row;flex-wrap:wrap">
+                        <div class="campo" style="visibility: hidden;">
+                            <input type="text" class="form-control" name="tipo" value="juridico">
+                        </div>
                         <div class="campo">
                             <label for="name2" class="form-label" style="font-weight: normal;">Nombre <span class="wpforms-required-label">*</span></label>
                             <input type="text" class="form-control" id="name2" name="name2" required>
