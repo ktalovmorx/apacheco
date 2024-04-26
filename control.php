@@ -103,24 +103,27 @@ class Presupuesto{
 $PRE = new Presupuesto();
 if ($_SERVER["REQUEST_METHOD"] == 'GET'){
     $tipo = $_GET['tipo'];
+	
     if ($tipo == 'finca'){
-        $nombre = $_GET['name'];
-        $correo = $_GET['correo'];
-        $telefono = $_GET['telefono'];
+        $nombre = $_GET['name1'];
+        $correo = $_GET['mail1'];
+        $telefono = $_GET['phone1'];
         $poblacion = $_GET['poblacion1'];
-        $response = $PRE->request_finca($nombre, $correo, $telefono);
+        //$response = $PRE->request_finca($nombre, $correo, $telefono);
+		echo $tipo;
     }
     else if ($tipo == 'juridico'){
-        $nombre = $_GET['name'];
-        $correo = $_GET['correo'];
-        $telefono = $_GET['telefono'];
-        $asunto = $_GET['asunto'];
-        $response = $PRE->request_juridico($nombre, $correo, $telefono, $asunto);
+        $nombre = $_GET['name2'];
+        $correo = $_GET['mail2'];
+        $telefono = $_GET['phone2'];
+        $asunto = $_GET['asunto1'];
+        //$response = $PRE->request_juridico($nombre, $correo, $telefono, $asunto);
+		echo $tipo;
     }
     else{
         $response = array('status'=>false, 'message'=>'Invalid TYPE' , 'answer'=>[$tipo]);
     }
-	echo json_encode($response);
+	echo "Invalid method";
 }else{
 	echo "Invalid method";
 }
