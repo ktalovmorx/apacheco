@@ -9,6 +9,11 @@ ini_set('display_errors', 0);
 session_start();
 
 class Presupuesto{
+    private $SQL_SERVER;
+    private $DATABASE_NAME;
+    private $SQL_USER;
+    private $SQL_PASS;
+    private $conn;
 	
 	public function __construct(){
 		$this->SQL_SERVER = 'localhost';
