@@ -15,9 +15,6 @@ class Presupuestos
 		$this->DATABASE_NAME = 'predb';
 		$this->SQL_USER = 'root';
 		$this->SQL_PASS = '';
-		
-		/*Se utiliza el secret para eliminar un usuario y otro tipo de cosas*/
-		$this->SECRET = '#928((0sjj1267bgh';
 	}
 
 	public function startConnection(){
