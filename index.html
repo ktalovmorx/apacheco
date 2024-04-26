@@ -39,11 +39,11 @@
     <div class="container" style="display: flex;flex-direction: column;">
         <div class="container-fluid">
             <hr style="color:gray">
-            <div class="container-fluid p-4 bg-primary text-white text-center">
+            <div class="container-fluid p-4 bg-dark text-white text-center">
                 <h1>PRESUPUESTOS ONLINE</h1>
                 <p>Para Administración de Fincas y Servicios Jurídicos</p> 
             </div>
-            <div class="container-fluid bg-light p-3 text-left rounded" style="max-width:50%;float:left;margin-top:10px;margin-bottom:10px">
+            <div class="container-fluid bg-light p-3 text-left rounded" style="font-size:20px;max-width:75%;float:left;margin-top:10px;margin-bottom:10px">
                 <p>Complete el formulario para recibir presupuesto para su comunidad de propietarios.
                     En menos de 24 horas nos comprometemos a facilitarle el presupuesto de administración de fincas.
                     Si tiene alguna duda puede contactar con nosotros, estaremos encantados de atenderle.
@@ -55,45 +55,54 @@
             <h2 style="font-weight: bold;">Presupuesto para Administración de Fincas</h2>
             <form class="form-control">
                 <div class="mb-3 mt-3">
-                  <label for="email" class="form-label">Email:</label>
+                  <label for="email" class="form-label" style="font-weight: normal;">Email:</label>
                   <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
                 </div>
                 <div class="mb-3">
-                  <label for="pwd" class="form-label">Password:</label>
+                  <label for="pwd" class="form-label" style="font-weight: normal;">Password:</label>
                   <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
                 </div>
                 <div class="form-check mb-3">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                    <input class="form-check-input" type="checkbox" name="remember"> <a href="#">Acepto política de privacidad</a>
                   </label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="container-fluid" style="display: flex;justify-content: center;">
+                    <button type="submit" class="btn btn-sm btn-danger" style="color:white;font-weight: bold;">Enviar</button>
+                </div>
               </form>
         </div>
         <div class="container" style="height: 10px;"></div>
+
+        <div class="container" style="display:flex;justify-content: center;">
+            <hr style="color:red; width:50%;">
+        </div>
+        
         <div class="container-fluid">
             <h2 style="font-weight: bold;">Presupuesto para Servicios Jurídicos</h2>
             <form class="form-control">
                 <div class="mb-3 mt-3">
-                  <label for="email" class="form-label">Email:</label>
+                  <label for="email" class="form-label" style="font-weight: normal;">Email:</label>
                   <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
                 </div>
                 <div class="mb-3">
-                  <label for="pwd" class="form-label">Password:</label>
+                  <label for="pwd" class="form-label" style="font-weight: normal;">Password:</label>
                   <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
                 </div>
                 <div class="form-check mb-3">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                    <input class="form-check-input" type="checkbox" name="remember"> <a href="#">Acepto política de privacidad</a>
                   </label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="container-fluid" style="display: flex;justify-content: center;">
+                    <button type="submit" class="btn btn-sm btn-danger" style="color:white;font-weight: bold;">Enviar</button>
+                </div>
               </form>
         </div>
-        <hr style="color:red">
+        <hr style="color:gray">
         <div class="container" style="height:50px"></div>
     </div>
-    <div class="container-fluid text-center" style="bottom:0;background-color:#ac1a2f;position:fixed;">
+    <div class="container-fluid text-center" style="bottom:0;background-color:#ac1a2f;position:fixed;padding:5px">
         <span style="color:white">Copyright 2024 - @apacheco - Administrador de Fincas</span>
         <br>
         <a href="#" style="color:white">Aviso Legal, Privacidad y Cookies</a>
