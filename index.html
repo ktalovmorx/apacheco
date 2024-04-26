@@ -10,7 +10,7 @@
         <title>Presupuestos</title>
     </head>
     <body>
-        <div class="container-fluid bg-danger" style="width:100%;height:10px;"></div>
+        <div class="container-fluid bg-danger bagi" style="width:100%;"></div>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html"><img src="img/calculadora.png" style="width:50px"></a>
@@ -20,16 +20,13 @@
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
+                            <a class="nav-link" href="index.html">Presupuestos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="page/administracion_fincas.html">Administraci&oacute;n de Fincas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="page/servicios_juridicos.html">Servicios Juridicos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="page/presupuestos.html">Presupuestos</a>
                         </li>
                     </ul>
                 </div>
@@ -39,7 +36,7 @@
         <div class="container" style="display: flex;flex-direction: column;">
             <div class="container-fluid">
                 <div class="container" style="height: 10px;"></div>
-                <div class="container-fluid p-4 text-white text-center" style="background-color:#1c110a">
+                <div class="container-fluid p-4 text-white text-center rounded" style="background-color:#1c110a">
                     <h1>PRESUPUESTOS ONLINE</h1>
                     <p>Para Administración de Fincas y Servicios Jurídicos</p> 
                 </div>
@@ -52,62 +49,64 @@
             </div>
         
             <div class="container-fluid">
-                <h2 style="font-weight: bold;">Presupuesto para Administración de Fincas</h2>
-                <form class="form-control bg-light">
-                    <div class="mb-3 mt-3">
-                        <label for="name1" class="form-label" style="font-weight: normal;">Nombre</label>
-                        <input type="email" class="form-control" id="name1" name="name1">
+                <h2 class='rounded text-left' style="font-weight: bold;background-color:white;width:60%">Presupuesto para Administración de Fincas</h2>
+                <form class="form-control bg-light" action="control.php">
+                    <div class="container-fluid" style="display:flex; flex-direction: row;flex-wrap:wrap">
+                        <div class="campo">
+                            <label for="name1" class="form-label" style="font-weight: normal;">Nombre <span class="wpforms-required-label">*</span></label>
+                            <input type="email" class="form-control" id="name1" name="name1" required>
+                        </div>
+                        <div class="campo">
+                            <label for="phone1" class="form-label" style="font-weight: normal;">Tel&eacute;fono <span class="wpforms-required-label">*</span></label>
+                            <input type="password" class="form-control" id="phone1" name="phone1" required>
+                        </div>
+                        <div class="campo">
+                            <label for="mail1" class="form-label" style="font-weight: normal;">Correo</label>
+                            <input type="email" class="form-control" id="mail1" name="mail1" required>
+                        </div>
+                        <div class="campo">
+                            <label for="poblacion1" class="form-label" style="font-weight: normal;">Poblaci&oacute;n <span class="wpforms-required-label">*</span></label>
+                            <input type="text" class="form-control" id="direccion1" name="poblacion1" required>
+                        </div>
+                        <div class="campo">
+                            <label for="direccion1" class="form-label" style="font-weight: normal;">Direcci&oacute;n <span class="wpforms-required-label">*</span></label>
+                            <input type="text" class="form-control" id="direccion1" name="direccion1" required>
+                        </div>
+                        <div class="campo">
+                            <label for="cargo1" class="form-label" style="font-weight: normal;">Cargo</label>
+                            <select class="form-control" id="cargo1">
+                              <option value="presidente">Presidente</option>
+                              <option value="vicepresidente">VicePresidente</option>
+                              <option value="vecino">Vecino</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="viviendas1" class="form-label" style="font-weight: normal;">Viviendas <span class="wpforms-required-label">*</span></label>
+                            <input type="number" class="form-control" id="viviendas1" name="viviendas1" required>
+                        </div>
+                        <div class="campo">
+                            <label for="parqueo1" class="form-label" style="font-weight: normal;">Parqueos</label>
+                            <input type="number" class="form-control" id="parqueo1" name="parqueo1">
+                        </div>
+                        <div class="campo">
+                            <label for="trasteros1" class="form-label" style="font-weight: normal;">Trasteros</label>
+                            <input type="number" class="form-control" id="trasteros1" name="trasteros1">
+                        </div>
+                        <div class="campo">
+                            <label for="locales1" class="form-label" style="font-weight: normal;">Locales Comerciales</label>
+                            <input type="number" class="form-control" id="locales1" name="locales1">
+                        </div>
+                        <div class="campo">
+                            <label for="ascensores1" class="form-label" style="font-weight: normal;">Ascensores</label>
+                            <input type="number" class="form-control" id="ascensores1" name="ascensores1">
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="phone1" class="form-label" style="font-weight: normal;">Tel&eacute;fono</label>
-                        <input type="password" class="form-control" id="phone1" name="phone1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="mail1" class="form-label" style="font-weight: normal;">Correo</label>
-                        <input type="email" class="form-control" id="mail1" name="mail1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="poblacion1" class="form-label" style="font-weight: normal;">Poblaci&oacute;n</label>
-                        <input type="text" class="form-control" id="direccion1" name="poblacion1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="direccion1" class="form-label" style="font-weight: normal;">Direcci&oacute;n</label>
-                        <input type="text" class="form-control" id="direccion1" name="direccion1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="cargo1" class="form-label" style="font-weight: normal;">Cargo</label>
-                        <select class="form-control" id="cargo1">
-                          <option value="presidente">Presidente</option>
-                          <option value="vicepresidente">VicePresidente</option>
-                          <option value="vecino">Vecino</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="viviendas1" class="form-label" style="font-weight: normal;">Número de Viviendas</label>
-                        <input type="number" class="form-control" id="viviendas1" name="viviendas1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="plazas1" class="form-label" style="font-weight: normal;">Número de Plazas de garaje</label>
-                        <input type="number" class="form-control" id="plazas1" name="plazas1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="trasteros1" class="form-label" style="font-weight: normal;">Número de Trasteros</label>
-                        <input type="number" class="form-control" id="trasteros1" name="trasteros1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="locales1" class="form-label" style="font-weight: normal;">Número de Locales Comerciales</label>
-                        <input type="number" class="form-control" id="locales1" name="locales1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="ascensores1" class="form-label" style="font-weight: normal;">Número de Ascensores</label>
-                        <input type="number" class="form-control" id="ascensores1" name="ascensores1">
-                    </div>
-                    <div class="mb-3">
+                    <div>
                         <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="remember"> <a href="page/politica.html">Acepto política de privacidad</a>
+                            <input class="form-check-input" type="checkbox" name="remember"> <a style="text-decoration: none" href="page/politica.html">Acepto política de privacidad</a>
                         </label>
                     </div>
-                    <div class="container-fluid" style="display: flex;justify-content: center;">
+                    <div class="container-fluid" style="display: flex;justify-content: right;">
                         <button type="submit" class="btn btn-sm btn-danger" style="color:white;font-weight: bold;">Enviar</button>
                     </div>
                 </form>
@@ -115,34 +114,36 @@
             <div class="container" style="height: 10px;"></div>
 
             <div class="container" style="display:flex;justify-content: center;">
-                <hr style="color:red; width:50%;">
+                <div class="container-fluid" style="height:2px;background-color: red;width:50%;margin-bottom:10px"></div>
             </div>
             
             <div class="container-fluid">
-                <h2 style="font-weight: bold;">Presupuesto para Servicios Jurídicos</h2>
-                <form class="form-control bg-light">
-                    <div class="mb-3 mt-3">
-                        <label for="name2" class="form-label" style="font-weight: normal;">Nombre</label>
-                        <input type="text" class="form-control" id="name2" name="name2">
+                <h2 class='rounded text-left' style="font-weight: bold;background-color:white;width:60%">Presupuesto para Servicios Jurídicos</h2>
+                <form class="form-control bg-light" action="control.php">
+                    <div class="container-fluid" style="display:flex; flex-direction: row;flex-wrap:wrap">
+                        <div class="campo">
+                            <label for="name2" class="form-label" style="font-weight: normal;">Nombre <span class="wpforms-required-label">*</span></label>
+                            <input type="text" class="form-control" id="name2" name="name2" required>
+                        </div>
+                        <div class="campo">
+                            <label for="phone2" class="form-label" style="font-weight: normal;">Tel&eacute;fono <span class="wpforms-required-label">*</span></label>
+                            <input type="text" class="form-control" id="phone2" name="phone2" required>
+                        </div>
+                        <div class="campo">
+                            <label for="mail2" class="form-label" style="font-weight: normal;">Correo <span class="wpforms-required-label">*</span></label>
+                            <input type="email" class="form-control" id="mail2" name="mail2" required>
+                        </div>
+                        <div class="campo">
+                            <label for="asunto" class="form-label" style="font-weight: normal;">Asunto</label>
+                            <textarea class="form-control" id="asunto" name="asunto"></textarea>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="phone2" class="form-label" style="font-weight: normal;">Tel&eacute;fono</label>
-                        <input type="text" class="form-control" id="phone2" name="phone2">
-                    </div>
-                    <div class="mb-3">
-                        <label for="mail2" class="form-label" style="font-weight: normal;">Correo</label>
-                        <input type="email" class="form-control" id="mail2" name="mail2">
-                    </div>
-                    <div class="mb-3">
-                        <label for="asunto" class="form-label" style="font-weight: normal;">Asunto</label>
-                        <textarea class="form-control" id="asunto" name="asunto"></textarea>
-                    </div>
-                    <div class="mb-3">
+                    <div>
                         <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="remember"> <a href="page/politica.html">Acepto política de privacidad</a>
+                            <input class="form-check-input" type="checkbox" name="remember"> <a style="text-decoration: none;" href="page/politica.html">Acepto política de privacidad</a>
                         </label>
                     </div>
-                    <div class="container-fluid" style="display: flex;justify-content: center;">
+                    <div class="container-fluid" style="display: flex;justify-content: right;">
                         <button type="submit" class="btn btn-sm btn-danger" style="color:white;font-weight: bold;">Enviar</button>
                     </div>
                 </form>
