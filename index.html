@@ -1,111 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="css/presupuestos.css" rel="stylesheet">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Presupuestos</title>
-</head>
-<body>
-    <div class="container-fluid bg-danger" style="width:100%;height:10px;"></div>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/calculadora.png" style="width:50px"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mynavbar">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                <a class="nav-link" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Administraci&oacute;n de Fincas</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Servicios Juridicos</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Presupuestos</a>
-                </li>
-            </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="css/presupuestos.css" rel="stylesheet">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <title>Presupuestos</title>
+    </head>
+    <body>
+        <div class="container-fluid bg-danger" style="width:100%;height:10px;"></div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="img/calculadora.png" style="width:50px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="page/administracion_fincas.html">Administraci&oacute;n de Fincas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="page/servicios_juridicos.html">Servicios Juridicos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="page/presupuestos.html">Presupuestos</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    
-    <div class="container" style="display: flex;flex-direction: column;">
-        <div class="container-fluid">
-            <hr style="color:gray">
-            <div class="container-fluid p-4 bg-dark text-white text-center">
-                <h1>PRESUPUESTOS ONLINE</h1>
-                <p>Para Administración de Fincas y Servicios Jurídicos</p> 
-            </div>
-            <div class="container-fluid bg-light p-3 text-left rounded" style="font-size:20px;max-width:75%;float:left;margin-top:10px;margin-bottom:10px">
-                <p>Complete el formulario para recibir presupuesto para su comunidad de propietarios.
-                    En menos de 24 horas nos comprometemos a facilitarle el presupuesto de administración de fincas.
-                    Si tiene alguna duda puede contactar con nosotros, estaremos encantados de atenderle.
-                </p> 
-            </div>
-        </div>
-    
-        <div class="container-fluid">
-            <h2 style="font-weight: bold;">Presupuesto para Administración de Fincas</h2>
-            <form class="form-control">
-                <div class="mb-3 mt-3">
-                  <label for="email" class="form-label" style="font-weight: normal;">Nombre:</label>
-                  <input type="email" class="form-control" id="email" name="name">
-                </div>
-                <div class="mb-3">
-                  <label for="pwd" class="form-label" style="font-weight: normal;">Tel&eacute;fono:</label>
-                  <input type="password" class="form-control" id="pwd" name="phone">
-                </div>
-                <div class="form-check mb-3">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="remember"> <a href="#">Acepto política de privacidad</a>
-                  </label>
-                </div>
-                <div class="container-fluid" style="display: flex;justify-content: center;">
-                    <button type="submit" class="btn btn-sm btn-danger" style="color:white;font-weight: bold;">Enviar</button>
-                </div>
-              </form>
-        </div>
-        <div class="container" style="height: 10px;"></div>
-
-        <div class="container" style="display:flex;justify-content: center;">
-            <hr style="color:red; width:50%;">
-        </div>
+        </nav>
         
-        <div class="container-fluid">
-            <h2 style="font-weight: bold;">Presupuesto para Servicios Jurídicos</h2>
-            <form class="form-control">
-                <div class="mb-3 mt-3">
-                  <label for="email" class="form-label" style="font-weight: normal;">Nombre:</label>
-                  <input type="email" class="form-control" id="email" name="name">
+        <div class="container" style="display: flex;flex-direction: column;">
+            <div class="container-fluid">
+                <hr style="color:gray">
+                <div class="container-fluid p-4 text-white text-center" style="background-color:#1c110a">
+                    <h1>PRESUPUESTOS ONLINE</h1>
+                    <p>Para Administración de Fincas y Servicios Jurídicos</p> 
                 </div>
-                <div class="mb-3">
-                  <label for="pwd" class="form-label" style="font-weight: normal;">Tel&eacute;fono:</label>
-                  <input type="password" class="form-control" id="pwd" name="phone">
+                <div class="container-fluid bg-light p-3 text-left rounded" style="font-size:20px;max-width:75%;float:left;margin-top:10px;margin-bottom:10px">
+                    <p>Complete el formulario para recibir presupuesto para su comunidad de propietarios.
+                        En menos de 24 horas nos comprometemos a facilitarle el presupuesto de administración de fincas.
+                        Si tiene alguna duda puede contactar con nosotros, estaremos encantados de atenderle.
+                    </p> 
                 </div>
-                <div class="form-check mb-3">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="remember"> <a href="#">Acepto política de privacidad</a>
-                  </label>
-                </div>
-                <div class="container-fluid" style="display: flex;justify-content: center;">
-                    <button type="submit" class="btn btn-sm btn-danger" style="color:white;font-weight: bold;">Enviar</button>
-                </div>
-              </form>
+            </div>
+        
+            <div class="container-fluid">
+                <h2 style="font-weight: bold;">Presupuesto para Administración de Fincas</h2>
+                <form class="form-control">
+                    <div class="mb-3 mt-3">
+                    <label for="email" class="form-label" style="font-weight: normal;">Nombre:</label>
+                    <input type="email" class="form-control" id="email" name="name">
+                    </div>
+                    <div class="mb-3">
+                    <label for="pwd" class="form-label" style="font-weight: normal;">Tel&eacute;fono:</label>
+                    <input type="password" class="form-control" id="pwd" name="phone">
+                    </div>
+                    <div class="form-check mb-3">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember"> <a href="#">Acepto política de privacidad</a>
+                    </label>
+                    </div>
+                    <div class="container-fluid" style="display: flex;justify-content: center;">
+                        <button type="submit" class="btn btn-sm btn-danger" style="color:white;font-weight: bold;">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container" style="height: 10px;"></div>
+
+            <div class="container" style="display:flex;justify-content: center;">
+                <hr style="color:red; width:50%;">
+            </div>
+            
+            <div class="container-fluid">
+                <h2 style="font-weight: bold;">Presupuesto para Servicios Jurídicos</h2>
+                <form class="form-control">
+                    <div class="mb-3 mt-3">
+                    <label for="email" class="form-label" style="font-weight: normal;">Nombre:</label>
+                    <input type="email" class="form-control" id="email" name="name">
+                    </div>
+                    <div class="mb-3">
+                    <label for="pwd" class="form-label" style="font-weight: normal;">Tel&eacute;fono:</label>
+                    <input type="password" class="form-control" id="pwd" name="phone">
+                    </div>
+                    <div class="form-check mb-3">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember"> <a href="#">Acepto política de privacidad</a>
+                    </label>
+                    </div>
+                    <div class="container-fluid" style="display: flex;justify-content: center;">
+                        <button type="submit" class="btn btn-sm btn-danger" style="color:white;font-weight: bold;">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container" style="height:80px"></div>
         </div>
-        <hr style="color:gray">
-        <div class="container" style="height:50px"></div>
-    </div>
-    <div class="container-fluid text-center" style="bottom:0;background-color:#ac1a2f;position:fixed;padding:5px">
-        <span style="color:white">Copyright 2024 - @apacheco - Administrador de Fincas</span>
-        <br>
-        <a href="#" style="color:white">Aviso Legal, Privacidad y Cookies</a>
-    </div>
-</body>
+        <div class="container-fluid text-center" style="bottom:0;background-color:#ac1a2f;position:fixed;padding:5px">
+            <span style="color:white">Copyright 2024 - @apacheco - Administrador de Fincas</span>
+            <br>
+            <a href="#" style="color:white">Aviso Legal, Privacidad y Cookies</a>
+        </div>
+    </body>
 </html>
