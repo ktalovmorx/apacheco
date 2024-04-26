@@ -3,12 +3,12 @@ document.getElementById("juridico_form").addEventListener("submit", function(eve
     event.preventDefault();
     
     // Your JavaScript code to run after form submission
-    alert("Form submitted!");
+    //alert("Form submitted!");
     // You can add more JavaScript code here
     
     // Now, you can submit the form programmatically if needed
     // For example:
-    // this.submit();
+    this.submit();
   });
 
   document.getElementById("finca_form").addEventListener("submit", function(event) {
@@ -16,10 +16,10 @@ document.getElementById("juridico_form").addEventListener("submit", function(eve
     event.preventDefault();
     
     // Your JavaScript code to run after form submission
-    alert("Form submitted!");
+    //alert("Form submitted!");
     // You can add more JavaScript code here
     
     // Now, you can submit the form programmatically if needed
     // For example:
-    // this.submit();
+    this.submit();
   });

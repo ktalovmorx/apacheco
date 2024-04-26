@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 0);
 session_start();
 
-class Presupuestos{
+class Presupuesto{
 	public function __construct(){
 		$this->SQL_SERVER = 'localhost';
 		$this->DATABASE_NAME = 'predb';
@@ -65,15 +65,15 @@ class Presupuestos{
 		return array('status'=>$ret_status, 'message'=>$ret_message , 'answer'=>$rows);
 	}
 
-	public function request_finca($nombre, $telefono, $correo, $asunto){
+	public function request_finca($nombre, $telefono, $correo){
 		/*
 		@Description > Add a new transaction
 		*/
 
 		$conn = $this->startConnection();
 		$fecha = strval(date_create()->format('Y-m-d'));
-		$stmt = $conn->prepare("INSERT INTO solicitud_juridico (nombre, telefono, correo, asunto, fecha) VALUES (?, ?, ?, ?, ?);");
-		$stmt->bind_param("sssss", $nombre, $telefono, $correo, $asunto, $fecha);
+		$stmt = $conn->prepare("INSERT INTO solicitud_finca (nombre, telefono, correo,  fecha) VALUES (?, ?, ?, ?);");
+		$stmt->bind_param("ssss", $nombre, $telefono, $correo, $fecha);
 		$stmt->execute();
 
 		$count = $stmt->affected_rows;
@@ -94,7 +94,7 @@ class Presupuestos{
 
 }
 
-$PRE = new Presupuestos();
+$PRE = new Presupuesto();
 if ($_SERVER["REQUEST_METHOD"] == 'GET'){
     $tipo = $_GET['tipo'];
     if ($tipo == 'finca'){
@@ -102,14 +102,14 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET'){
         $correo = $_GET['correo'];
         $telefono = $_GET['telefono'];
         $poblacion = $_GET['poblacion1'];
-        $response = $PRE->request_finca($name);
+        $response = $PRE->request_finca($nombre, $correo, $telefono);
     }
     else if ($tipo == 'juridico'){
         $nombre = $_GET['name'];
         $correo = $_GET['correo'];
         $telefono = $_GET['telefono'];
         $asunto = $_GET['asunto'];
-        $response = $PRE->request_juridico($name);
+        $response = $PRE->request_juridico($nombre, $correo, $telefono, $asunto);
     }
     else{
         $response = array('status'=>false, 'message'=>'Invalid TYPE' , 'answer'=>[]);
