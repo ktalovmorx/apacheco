@@ -9,6 +9,7 @@ ini_set('display_errors', 0);
 session_start();
 
 class Presupuesto{
+	
 	public function __construct(){
 		$this->SQL_SERVER = 'localhost';
 		$this->DATABASE_NAME = 'predb';
