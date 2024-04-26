@@ -119,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET'){
         $telefono = $_GET['phone2'];
         $asunto = $_GET['asunto1'];
         //$response = $PRE->request_juridico($nombre, $correo, $telefono, $asunto);
-		header("Location: /page/success.html");
+		header("Location: page/success.html");
 		exit;
     }
     else{
