@@ -110,7 +110,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET'){
         $telefono = $_GET['phone1'];
         $poblacion = $_GET['poblacion1'];
         //$response = $PRE->request_finca($nombre, $correo, $telefono);
-		echo $tipo;
+		header("Location: page/success.html");
+		exit;
     }
     else if ($tipo == 'juridico'){
         $nombre = $_GET['name2'];
@@ -118,7 +119,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET'){
         $telefono = $_GET['phone2'];
         $asunto = $_GET['asunto1'];
         //$response = $PRE->request_juridico($nombre, $correo, $telefono, $asunto);
-		echo $tipo;
+		header("Location: /page/success.html");
+		exit;
     }
     else{
         $response = array('status'=>false, 'message'=>'Invalid TYPE' , 'answer'=>[$tipo]);
