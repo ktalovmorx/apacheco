@@ -110,12 +110,12 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET'){
         $phone = $_GET['phone1'];
         $poblacion = $_GET['poblacion1'];
 		$direccion = $_GET['poblacion1'];
-		$cargo = $_GET['poblacion1'];
-		$viviendas = $_GET['poblacion1'];
-		$parqueos = $_GET['poblacion1'];
-		$trasteros = $_GET['poblacion1'];
-		$locales = $_GET['poblacion1'];
-		$ascensores = $_GET['poblacion1'];
+		$cargo = $_GET['cargo1'];
+		$viviendas = $_GET['viviendas1'];
+		$parqueos = $_GET['parqueos1'];
+		$trasteros = $_GET['trasteros1'];
+		$locales = $_GET['locales1'];
+		$ascensores = $_GET['ascensores1'];
         $response = $PRE->request_finca($name, $mail, $phone, $poblacion, $direccion, $cargo, $viviendas, $parqueos, $trasteros, $locales, $ascensores);
 		header("Location: page/success.html");
 		exit;
