@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET'){
 		$direccion = $_GET['poblacion1'];
 		$cargo = $_GET['cargo1'];
 		$viviendas = $_GET['viviendas1'];
-		$parqueos = $_GET['parqueos1'];
+		$parqueos = $_GET['parqueo1'];
 		$trasteros = $_GET['trasteros1'];
 		$locales = $_GET['locales1'];
 		$ascensores = $_GET['ascensores1'];
