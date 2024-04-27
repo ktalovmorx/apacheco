@@ -1,0 +1,23 @@
+CREATE DATABASE IF NOT EXIST predb;
+USE predb;
+
+CREATE TABLE solicitud_juridico(
+    nombre VARCHAR(24) NOT NULL,
+    telefono VARCHAR(24) NOT NULL,
+    correo VARCHAR(64) NOT NULL,
+    asunto TEXT DEFAULT "-"
+);
+
+CREATE TABLE solicitud_finca(
+    nombre VARCHAR(24) NOT NULL,
+    telefono VARCHAR(24) NOT NULL,
+    correo VARCHAR(64) NOT NULL,
+    poblacion INT(8) DEFAULT 0,
+    direccion TEXT DEFAULT "-",
+    cargo VARCHAR(12),
+    viviendas INT(8) DEFAULT 0,
+    parqueos INT(8) DEFAULT 0,
+    trasteros INT(8) DEFAULT 0,
+    locales INT(8) DEFAULT 0,
+    ascensores INT(8) DEFAULT 0
+);
