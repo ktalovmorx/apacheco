@@ -51,8 +51,8 @@ class Presupuesto{
 		$conn = $this->startConnection();
 		$fecha = strval(date_create()->format('Y-m-d'));
 
-		$stmt = $conn->prepare("INSERT INTO solicitud_juridico (nombre, telefono, correo, asunto, fecha) VALUES (?, ?, ?, ?, ?);");
-		$stmt->bind_param("sssss", $nombre, $telefono, $correo, $asunto, $fecha);
+		$stmt = $conn->prepare("INSERT INTO solicitud_juridico (nombre, telefono, correo, asunto) VALUES (?, ?, ?, ?);");
+		$stmt->bind_param("ssss", $nombre, $telefono, $correo, $asunto);
 		$stmt->execute();
 
 		$count = $stmt->affected_rows;
@@ -71,15 +71,15 @@ class Presupuesto{
 		return array('status'=>$ret_status, 'message'=>$ret_message , 'answer'=>$rows);
 	}
 
-	public function request_finca($nombre, $telefono, $correo){
+	public function request_finca($name, $mail, $phone, $poblacion, $direccion, $cargo, $viviendas, $parqueos, $trasteros, $locales, $ascensores){
 		/*
 		@Description > Add a new transaction
 		*/
 
 		$conn = $this->startConnection();
 		$fecha = strval(date_create()->format('Y-m-d'));
-		$stmt = $conn->prepare("INSERT INTO solicitud_finca (nombre, telefono, correo,  fecha) VALUES (?, ?, ?, ?);");
-		$stmt->bind_param("ssss", $nombre, $telefono, $correo, $fecha);
+		$stmt = $conn->prepare("INSERT INTO solicitud_finca (nombre, correo, telefono, poblacion, direccion, cargo, viviendas, parqueos, trasteros, locales, ascensores) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+		$stmt->bind_param("sssssssssss", $name, $mail, $phone, $poblacion, $direccion, $cargo, $viviendas, $parqueos, $trasteros, $locales, $ascensores);
 		$stmt->execute();
 
 		$count = $stmt->affected_rows;
@@ -105,20 +105,27 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET'){
     $tipo = $_GET['tipo'];
 	
     if ($tipo == 'finca'){
-        $nombre = $_GET['name1'];
-        $correo = $_GET['mail1'];
-        $telefono = $_GET['phone1'];
+        $name = $_GET['name1'];
+        $mail = $_GET['mail1'];
+        $phone = $_GET['phone1'];
         $poblacion = $_GET['poblacion1'];
-        //$response = $PRE->request_finca($nombre, $correo, $telefono);
+		$direccion = $_GET['poblacion1'];
+		$cargo = $_GET['poblacion1'];
+		$viviendas = $_GET['poblacion1'];
+		$parqueos = $_GET['poblacion1'];
+		$trasteros = $_GET['poblacion1'];
+		$locales = $_GET['poblacion1'];
+		$ascensores = $_GET['poblacion1'];
+        $response = $PRE->request_finca($name, $mail, $phone, $poblacion, $direccion, $cargo, $viviendas, $parqueos, $trasteros, $locales, $ascensores);
 		header("Location: page/success.html");
 		exit;
     }
     else if ($tipo == 'juridico'){
-        $nombre = $_GET['name2'];
-        $correo = $_GET['mail2'];
-        $telefono = $_GET['phone2'];
+        $name = $_GET['name2'];
+        $mail = $_GET['mail2'];
+        $phone = $_GET['phone2'];
         $asunto = $_GET['asunto1'];
-        //$response = $PRE->request_juridico($nombre, $correo, $telefono, $asunto);
+        $response = $PRE->request_juridico($name, $mail, $phone, $asunto);
 		header("Location: page/success.html");
 		exit;
     }
