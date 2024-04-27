@@ -130,10 +130,11 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET'){
 		exit;
     }
     else{
-        $response = array('status'=>false, 'message'=>'Invalid TYPE' , 'answer'=>[$tipo]);
+		header("Location: page/error.html");
+		exit;
     }
-	echo "Invalid method";
 }else{
-	echo "Invalid method";
+	header("Location: page/error.html");
+	exit;
 }
 ?>
