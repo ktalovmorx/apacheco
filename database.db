@@ -2,22 +2,22 @@ CREATE DATABASE IF NOT EXISTS predb;
 USE predb;
 
 CREATE TABLE IF NOT EXISTS solicitud_juridico(
-    nombre VARCHAR(24) NOT NULL,
+    nombre VARCHAR(64) NOT NULL,
     telefono VARCHAR(24) NOT NULL,
     correo VARCHAR(64) NOT NULL,
     asunto TEXT DEFAULT "-"
 ) ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS solicitud_finca(
-    nombre VARCHAR(24) NOT NULL,
+    nombre VARCHAR(64) NOT NULL,
     telefono VARCHAR(24) NOT NULL,
     correo VARCHAR(64) NOT NULL,
     poblacion INT(8) DEFAULT 0,
     direccion TEXT DEFAULT "-",
     cargo VARCHAR(12),
-    viviendas INT(8) DEFAULT 0,
-    parqueos INT(8) DEFAULT 0,
-    trasteros INT(8) DEFAULT 0,
-    locales INT(8) DEFAULT 0,
+    viviendas INT(6) DEFAULT 0,
+    parqueos INT(6) DEFAULT 0,
+    trasteros INT(6) DEFAULT 0,
+    locales INT(6) DEFAULT 0,
     ascensores INT(8) DEFAULT 0
 ) ENGINE = InnoDB;
